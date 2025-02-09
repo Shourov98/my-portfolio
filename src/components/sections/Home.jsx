@@ -58,36 +58,12 @@ export const Home = () => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://github.com/your-profile" // Replace with your GitHub profile link
+              href="https://github.com/Shourov98/" // Replace with your GitHub profile link
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors"
             >
               <FaGithub size={24} />
-            </a>
-            <a
-              href="mailto:mahbubulhoqueshourov@gmail.com" // Replace with your email
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 transition-colors"
-            >
-              <HiMail size={24} />
-            </a>
-            <a
-              href="tel:+8801521528480" // Replace with your phone number
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 transition-colors"
-            >
-              <FaPhone size={24} />
-            </a>
-            <a
-              href="https://t.me/your-telegram" // Replace with your Telegram profile link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 transition-colors"
-            >
-              <FaTelegram size={24} />
             </a>
             <a
               href="https://wa.me/8801521528480" // Replace with your WhatsApp link
@@ -97,6 +73,39 @@ export const Home = () => {
             >
               <FaWhatsapp size={24} />
             </a>
+          </div>
+
+          {/* Email and Phone Number */}
+          <div className="flex justify-center space-x-6 md:space-x-8 mt-8">
+            {/* Phone Number */}
+            <div className="flex items-center space-x-2">
+              <a
+                href="tel:+8801521528480"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-500 transition-colors"
+              >
+                <FaPhone size={24} />
+              </a>
+              <p className="text-gray-400 hover:text-blue-500 transition-colors">
+                <a href="tel:+8801521528480">+8801521528480</a>
+              </p>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center space-x-2">
+              <a
+                href="mailto:mahbubulhoqueshourov@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-500 transition-colors"
+              >
+                <HiMail size={24} />
+              </a>
+              <p className="text-gray-400 hover:text-blue-500 transition-colors">
+                <a href="mailto:mahbubulhoqueshourov@gmail.com">mahbubulhoqueshourov@gmail.com</a>
+              </p>
+            </div>
           </div>
         </div>
       </RevealOnScroll>

@@ -36,7 +36,7 @@ export const About = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="rounded-xl p-6 md:p-8 border border-white/10 hover:border-blue-500/50 transition-all hover:-translate-y-1 bg-black/10 backdrop-blur-sm mb-8">
+          <div id="#skills" className="rounded-xl p-6 md:p-8 border border-white/10 hover:border-blue-500/50 transition-all hover:-translate-y-1 bg-black/10 backdrop-blur-sm mb-8">
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-blue-500">
               Skills
             </h3>

@@ -5,7 +5,7 @@ export const ProblemSolving = () => {
     "Array",
     "String",
     "Linked List",
-    "Stack",
+    "Stack",            // 
     "Queue",
     "Heap",
     "Tree",

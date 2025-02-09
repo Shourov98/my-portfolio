@@ -9,6 +9,7 @@ import { About } from './components/sections/About'
 import { Projects } from './components/sections/Projects'
 import { Contact } from './components/sections/Contact'
 import { ProblemSolving } from './components/sections/ProblemSolving'
+import { Footer } from './components/sections/Footer'
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -25,6 +26,7 @@ function App() {
         <ProblemSolving />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </>
   )
