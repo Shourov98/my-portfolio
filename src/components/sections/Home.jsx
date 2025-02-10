@@ -50,7 +50,7 @@ export const Home = () => {
               <FaFacebook size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/your-profile" // Replace with your LinkedIn profile link
+              href="https://www.linkedin.com/in/mahbubul-hoque-shourov/" // Replace with your LinkedIn profile link
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors"

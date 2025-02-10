@@ -6,25 +6,25 @@ const projectsData = [
     title: "Socially",
     description: "A blog site built with NextJs & Shadcn UI, Prisma for Database service.",
     technologies: ["NextJs", "Typescript", "Tailwind", "Prisma", "Clerk"],
-    images: ["socially1.jpg", "socially2.jpg", "socially3.jpg"],
-    githubLink: "https://github.com/yourusername/Socially",
-    liveView: "https://socially-live-view.com"
+    images: ["../../../public/socially/ss-1.png", "../../../public/socially/ss-2.png", "../../../public/socially/ss-1.png"],
+    githubLink: "https://github.com/Shourov98/Socially",
+    liveView: "https://socially-flax.vercel.app/"
   },
   {
     title: "Sorting Visualizer",
     description: "Sorting algorithms visualizer built with ReactJS.",
     technologies: ["ReactJs", "Javascript", "CSS", "Vite"],
-    images: ["sorting1.jpg", "sorting2.jpg", "sorting3.jpg"],
-    githubLink: "https://github.com/yourusername/SortingVisualizer",
-    liveView: "https://sorting-visualizer-live-view.com"
+    images: ["../../../public/sortingAlgo/ss-1.png", "../../../public/sortingAlgo/ss-2.png", "../../../public/sortingAlgo/ss-1.png"],
+    githubLink: "https://github.com/Shourov98/sorting_algo_visualization",
+    liveView: "https://socially-flax.vercel.app/"
   },
   {
     title: "Mega Blog",
-    description: "A blog site built with React+Vite environment with Appwrite Database service.",
+    description: "A blog site built with React and Vite environment with Appwrite Database service.",
     technologies: ["ReactJs", "Javascript", "Tailwind", "Appwrite", "Redux"],
-    images: ["megablog1.jpg", "megablog2.jpg", "megablog3.jpg"],
-    githubLink: "https://github.com/yourusername/MegaBlog",
-    liveView: "https://mega-blog-live-view.com"
+    images: ["../../../public/mega-blog/ss-1.png", "../../../public/mega-blog/ss-2.png", "../../../public/mega-blog/ss-1.png"],
+    githubLink: "https://github.com/Shourov98/MegaBlogg",
+    liveView: "https://mega-blog-smoky.vercel.app/"
   },
   {
     title: "Todo Task",
