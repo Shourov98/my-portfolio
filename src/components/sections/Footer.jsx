@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">MD. MAHBUBUL HOQUE SHOUROV</h3>
             <p className="text-gray-400">
-              A passionate Front-end Developer with a strong foundation in JavaScript, React, and problem-solving. Dedicated to building responsive and efficient user interfaces.
+              A passionate MERN Stack Developer with a strong foundation in JavaScript, React, ExpressJs, NodeJs, MongoDB, and problem-solving. Dedicated to building responsive and efficient user interfaces.
             </p>
           </div>
 

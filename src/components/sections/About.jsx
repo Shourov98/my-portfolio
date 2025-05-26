@@ -5,10 +5,17 @@ export const About = () => {
     "C++",
     "JavaScript",
     "React",
+    "NextJs",
+    "ExpressJs",
+    "NodeJs",
+    "MongoDB",
     "TypeScript",
     "TailwindCSS",
     "SQL",
     "Git",
+    "Redux",
+    "Github",
+    "RestAPI",
     "Python",
     "Data Structures",
     "Algorithms",
@@ -28,7 +35,7 @@ export const About = () => {
           {/* Summary Section */}
           <div className="rounded-xl p-6 md:p-8 border border-white/10 hover:border-blue-500/50 transition-all hover:-translate-y-1 bg-black/10 backdrop-blur-sm mb-8">
             <p className="text-gray-300 text-sm md:text-base mb-4 p-4">
-              Recent graduate with a Bachelor's degree in Mechatronics & Industrial Engineering from CUET, actively pursuing a career in Front-end Development. Proficient in JavaScript and the React framework, with a solid foundation in core computer science principles, data structures, and algorithms. Passionate about applying technology to solve complex, real-world challenges and driven to contribute to innovative projects.
+              Recent graduate with a Bachelor's degree in Mechatronics & Industrial Engineering from CUET, actively pursuing a career in Full-Stack Development. Proficient in JavaScript and the React Library, NextJs, ExpressJs, NodeJs, MongoDB, MySQL, TailwindCSS with a solid foundation in core computer science principles, data structures, and algorithms. Passionate about applying technology to solve complex, real-world challenges and driven to contribute to innovative projects.
             </p>
             <p className="text-gray-300 text-sm md:text-base p-4">
               Eager to bring a blend of technical knowledge, commitment, and adaptability to a collaborative, forward-thinking team, with a dedication to continuous professional growth.

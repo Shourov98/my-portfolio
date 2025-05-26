@@ -17,8 +17,8 @@ export const Home = () => {
           </h1>
 
           {/* Summary */}
-          <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            A recent graduate in Mechatronics & Industrial Engineering from CUET, transitioning into full-stack development. Proficient in JavaScript, React, and problem-solving with a strong foundation in data structures and algorithms. Passionate about building clean, scalable, and user-friendly web applications.
+          <p className="text-gray-400 align-left text-lg mb-8 max-w-lg mx-auto">
+            A recent graduate in Mechatronics & Industrial Engineering from CUET, transitioning into full-stack development. Proficient in JavaScript, React, NextJs, ExpressJs, NodeJs, MongoDB, and problem-solving with a strong foundation in data structures and algorithms. Passionate about building clean, scalable, and user-friendly web applications.
           </p>
 
           {/* Buttons */}

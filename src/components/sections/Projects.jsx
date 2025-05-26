@@ -4,12 +4,30 @@ import { RevealOnScroll } from "../RevealOnScroll";
 // Array of project objects
 const projectsData = [
   {
+    title: "MFS - Mobile Banking Service (MERN Stack)",
+    description: "A Mobile banking sevice replication inspired from Bkash / Nagad. A showcase of RBAC implementation with different UI for different roles with MERN Stack.",
+    technologies: ["NextJs", "ExpressJs", "Tailwind", "MongoDB", "NodeJs", "Redux"],
+    images: ["/mfs/ss-1.png", "/mfs/ss-2.png", "/mfs/ss-3.png", "/mfs/ss-4.png", "/mfs/ss-5.png", "/mfs/ss-6.png"],
+    frontend: "https://github.com/Shourov98/mfs-frontend",
+    backend: "https://github.com/Shourov98/mfs-backend",
+    liveView: "https://mfs-frontend-sooty.vercel.app/",
+  },
+  {
     title: "Socially",
     description: "A blog site built with NextJs & Shadcn UI, Prisma for Database service.",
     technologies: ["NextJs", "Typescript", "Tailwind", "Prisma", "Clerk"],
     images: ["/socially/ss-1.png", "/socially/ss-2.png", "/socially/ss-3.png"],
     githubLink: "https://github.com/Shourov98/Socially",
     liveView: "https://socially-flax.vercel.app/",
+  },
+  {
+    title: "Chatty - Real time Chatting App (MERN Stack)",
+    description: "A real time chatting app built with ReactJS, ExpressJS & DaisyUI, MongoDB for Database service. JWT for authentication.and SocketIo for real time chat.",
+    technologies: ["ReactJs", "NodeJs", "Javascript", "Tailwind", "MongoDB", "SocketIo", "JWT"],
+    images: ["/chatty/ss-1.png", "/chatty/ss-2.png", "/chatty/ss-3.png", "/chatty/ss-4.png"],
+    backend: "https://github.com/Shourov98/chat-app-express-backend",
+    frontend: "https://github.com/Shourov98/chat-app-react-frontend",
+    
   },
   {
     title: "Sorting Visualizer",
@@ -44,7 +62,7 @@ export const Projects = () => {
   const closeModal = () => setSelectedImage(null);
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-[#0D1117]">
+    <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-black">
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-10 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
@@ -91,14 +109,36 @@ export const Projects = () => {
 
                 {/* Buttons Section */}
                 <div className="flex justify-between items-center mt-4">
-                  <a
-                    href={project.githubLink}
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Project →
-                  </a>
+                  {project.frontend && (
+                    <a
+                      href={project.frontend}
+                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Frontend
+                    </a>
+                  )}
+                  {project.backend && (
+                    <a
+                      href={project.backend}
+                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Backend
+                    </a>
+                  )}
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  )}
                   {project.liveView && (
                     <a
                       href={project.liveView}
