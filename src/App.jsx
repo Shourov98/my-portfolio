@@ -23,8 +23,8 @@ function App() {
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
         <About />
-        <ProblemSolving />
         <Projects />
+        <ProblemSolving />
         <Contact />
         <Footer />
       </div>
