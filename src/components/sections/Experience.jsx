@@ -27,8 +27,8 @@ export const Experience = () => {
           <div className="rounded-2xl p-6 md:p-8 border border-white/10 hover:border-blue-500/50 transition-all hover:-translate-y-1 bg-[#0d1117] backdrop-blur-sm shadow-xl">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-blue-400">Sparktech Agency</p>
-                <h3 className="text-2xl font-bold text-white">Junior Fullstack Developer</h3>
+                <p className="text-2xl uppercase tracking-[0.2em] text-blue-300">Sparktech Agency</p>
+                <h3 className="text-2xl font-semibold text-white">Junior Fullstack Developer</h3>
               </div>
               <span className="self-start md:self-auto bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">
                 July 25 - Present
