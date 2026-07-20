@@ -1,9 +1,34 @@
+import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import { FaFacebook, FaLinkedin, FaGithub, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaCheckCircle,
+  FaCopy,
+  FaDownload,
+  FaEye,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { FaPhone } from "react-icons/fa6";
 
 export const Home = () => {
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const email = "mahbubulhoqueshourov@gmail.com";
+  const resumePath = "/resume/mahbubul-hoque-shourov-resume.pdf";
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 1800);
+    } catch {
+      window.location.href = `mailto:${email}`;
+    }
+  };
+
   return (
     <section
       id="home"
@@ -12,17 +37,17 @@ export const Home = () => {
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
-            Hi, I'm Mahbubul Hoque Shourov
+          <h1 className="animated-name text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-cyan-300 to-blue-500 bg-clip-text text-transparent leading-right">
+            Hi, I&apos;m Mahbubul Hoque Shourov
           </h1>
 
           {/* Summary */}
           <p className="text-gray-400 align-left text-lg mb-8 max-w-lg mx-auto">
-            A recent graduate in Mechatronics & Industrial Engineering from CUET, transitioning into full-stack development. Proficient in JavaScript, React, NextJs, ExpressJs, NodeJs, MongoDB, and problem-solving with a strong foundation in data structures and algorithms. Passionate about building clean, scalable, and user-friendly web applications.
+            Junior Full Stack Developer at SparkTech Agency building production SaaS applications with Next.js, React, TypeScript, Node.js, Express, FastAPI, MongoDB, and LLM APIs. I work across secure authentication, RBAC dashboards, API integrations, Stripe billing, CI/CD, and deployment on cloud/VPS infrastructure.
           </p>
 
           {/* Buttons */}
-          <div className="flex justify-center space-x-4 mb-10">
+          <div className="mb-10 flex flex-wrap justify-center gap-3">
             <a
               href="#projects"
               className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
@@ -37,6 +62,77 @@ export const Home = () => {
             >
               Contact Me
             </a>
+            <a
+              href={resumePath}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-cyan-400/50 text-cyan-300 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:bg-cyan-400/10"
+            >
+              <FaEye size={16} />
+              View Resume
+            </a>
+            <a
+              href={resumePath}
+              download="Mahbubul-Hoque-Shourov-Resume.pdf"
+              className="inline-flex items-center gap-2 border border-white/20 text-gray-200 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400/60 hover:bg-white/5"
+            >
+              <FaDownload size={16} />
+              Download Resume
+            </a>
+          </div>
+
+          <div className="hero-snapshot mx-auto mb-10 max-w-3xl rounded-2xl border border-white/10 bg-[#0d1117]/80 p-4 shadow-xl backdrop-blur-md md:p-5">
+            <div className="grid gap-4 md:grid-cols-[1.1fr_1fr] md:items-center">
+              <div className="text-left">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="availability-dot h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                    Available for full-stack roles
+                  </span>
+                </div>
+                <p className="text-sm leading-6 text-gray-300">
+                  Production SaaS, AI automation, secure auth, RBAC dashboards,
+                  Stripe billing, REST APIs, and cloud/VPS deployment.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <a
+                  href={resumePath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                >
+                  <FaEye size={20} />
+                  <span className="mt-2 text-xs font-medium">View CV</span>
+                </a>
+                <a
+                  href={resumePath}
+                  download="Mahbubul-Hoque-Shourov-Resume.pdf"
+                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                >
+                  <FaDownload size={20} />
+                  <span className="mt-2 text-xs font-medium">Download</span>
+                </a>
+                <button
+                  type="button"
+                  onClick={handleCopyEmail}
+                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                >
+                  {copiedEmail ? <FaCheckCircle size={20} /> : <FaCopy size={20} />}
+                  <span className="mt-2 text-xs font-medium">
+                    {copiedEmail ? "Copied" : "Email"}
+                  </span>
+                </button>
+                <a
+                  href="#experience"
+                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                >
+                  <FaBriefcase size={20} />
+                  <span className="mt-2 text-xs font-medium">Work</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Social Media Icons */}

@@ -36,6 +36,68 @@ body {
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+
+  @keyframes experience-rise {
+    0% {
+      opacity: 0;
+      transform: translateY(18px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes experience-sweep {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    35%,
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes name-shimmer {
+    0% {
+      background-position: 0% 50%;
+      transform: translateY(0);
+    }
+    50% {
+      background-position: 100% 50%;
+      transform: translateY(-3px);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes snapshot-rise {
+    0% {
+      opacity: 0;
+      transform: translateY(16px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes availability-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(52, 211, 153, 0);
+    }
+  }
 }
 
 .reveal {
@@ -47,4 +109,66 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.experience-shell {
+  box-shadow: 0 24px 80px rgba(8, 145, 178, 0.12);
+}
+
+.experience-glow {
+  animation: experience-sweep 3.8s ease-in-out infinite;
+}
+
+.experience-stat,
+.experience-item {
+  opacity: 0;
+  animation: experience-rise 0.65s ease forwards;
+}
+
+.animated-name {
+  background-size: 220% 220%;
+  animation: name-shimmer 5s ease-in-out infinite;
+}
+
+.hero-snapshot {
+  opacity: 0;
+  animation: snapshot-rise 0.75s ease 0.25s forwards;
+  box-shadow: 0 24px 70px rgba(8, 145, 178, 0.12);
+}
+
+.availability-dot {
+  animation: availability-pulse 1.8s ease-in-out infinite;
+}
+
+.quick-action {
+  animation: snapshot-rise 0.65s ease both;
+}
+
+.quick-action:nth-child(1) {
+  animation-delay: 0.35s;
+}
+
+.quick-action:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.quick-action:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+.quick-action:nth-child(4) {
+  animation-delay: 0.65s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-name,
+  .availability-dot,
+  .experience-glow,
+  .experience-stat,
+  .experience-item,
+  .hero-snapshot,
+  .quick-action {
+    animation: none;
+    opacity: 1;
+  }
 }

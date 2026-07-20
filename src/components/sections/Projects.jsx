@@ -4,54 +4,66 @@ import { RevealOnScroll } from "../RevealOnScroll";
 // Array of project objects
 const projectsData = [
   {
-    title: "MFS - Mobile Banking Service (MERN Stack)",
-    description: "A Mobile banking sevice replication inspired from Bkash / Nagad. A showcase of RBAC implementation with different UI for different roles with MERN Stack.",
-    technologies: ["NextJs", "ExpressJs", "Tailwind", "MongoDB", "NodeJs", "Redux"],
-    images: ["/mfs/ss-1.png", "/mfs/ss-2.png", "/mfs/ss-3.png", "/mfs/ss-4.png", "/mfs/ss-5.png", "/mfs/ss-6.png"],
-    frontend: "https://github.com/Shourov98/mfs-frontend",
-    backend: "https://github.com/Shourov98/mfs-backend",
-    liveView: "https://mfs-frontend-sooty.vercel.app/",
+    title: "AI Marketplace Product Generator (CommandCtr)",
+    description:
+      "AI agent for generating marketplace-ready product listings with SEO-friendly titles, descriptions, specifications, pricing suggestions, and listing images.",
+    technologies: ["Python", "FastAPI", "OpenAI API", "Next.js", "Node.js"],
+    highlights: [
+      "Built REST APIs for AI services using FastAPI.",
+      "Customized outputs for Amazon, eBay, Etsy, TikTok Shop, and Shopify.",
+      "Integrated frontend dashboards for managing AI-generated content.",
+    ],
   },
   {
-    title: "Socially",
-    description: "A blog site built with NextJs & Shadcn UI, Prisma for Database service.",
-    technologies: ["NextJs", "Typescript", "Tailwind", "Prisma", "Clerk"],
+    title: "BeforeListed - Apartment Rental Platform",
+    description:
+      "Full-stack apartment rental platform with referral signup, RBAC dashboards, JWT authentication, Stripe transactions, and admin approval workflows.",
+    technologies: ["Next.js", "Redux Toolkit", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Stripe", "Hetzner VPS"],
+    highlights: [
+      "Built scalable frontend state flows with Redux Toolkit, OTP validation, reusable UI components, and real-time toast notifications.",
+      "Designed REST APIs with secure authentication, PIN salting encryption, and user/admin management workflows.",
+      "Deployed the platform on Hetzner VPS.",
+    ],
+  },
+  {
+    title: "Chatty - Real time Chatting App (MERN Stack)",
+    description:
+      "Modern real-time chat platform with authentication, profile management, responsive UI, online user status, and live message delivery.",
+    technologies: ["React 18", "Vite", "Zustand", "Tailwind CSS", "DaisyUI", "Express.js", "MongoDB", "Socket.io", "JWT"],
+    images: ["/chatty/ss-1.png", "/chatty/ss-2.png", "/chatty/ss-3.png", "/chatty/ss-4.png"],
+    highlights: [
+      "Implemented RESTful backend APIs with JWT authentication and real-time messaging using Socket.io.",
+      "Built dark/light theme support, reusable components, toast feedback, and skeleton loaders.",
+      "Documented backend APIs with Swagger UI.",
+    ],
+    backend: "https://github.com/Shourov98/chat-app-express-backend",
+    frontend: "https://github.com/Shourov98/chat-app-react-frontend",
+  },
+  {
+    title: "Socially - Full-Stack Blog Platform",
+    description:
+      "Responsive social blog platform built with Next.js App Router, TypeScript, Clerk authentication, Prisma ORM, Shadcn UI, and Tailwind CSS.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Clerk", "Shadcn UI"],
     images: ["/socially/ss-1.png", "/socially/ss-2.png", "/socially/ss-3.png"],
+    highlights: [
+      "Designed a normalized Prisma database schema for efficient relationship-based data retrieval.",
+      "Implemented authentication with Clerk and reusable UI components with Shadcn UI.",
+    ],
     githubLink: "https://github.com/Shourov98/Socially",
     liveView: "https://socially-flax.vercel.app/",
   },
   {
-    title: "Chatty - Real time Chatting App (MERN Stack)",
-    description: "A real time chatting app built with ReactJS, ExpressJS & DaisyUI, MongoDB for Database service. JWT for authentication.and SocketIo for real time chat.",
-    technologies: ["ReactJs", "NodeJs", "Javascript", "Tailwind", "MongoDB", "SocketIo", "JWT"],
-    images: ["/chatty/ss-1.png", "/chatty/ss-2.png", "/chatty/ss-3.png", "/chatty/ss-4.png"],
-    backend: "https://github.com/Shourov98/chat-app-express-backend",
-    frontend: "https://github.com/Shourov98/chat-app-react-frontend",
-    
-  },
-  {
-    title: "Sorting Visualizer",
-    description: "Sorting algorithms visualizer built with ReactJS.",
-    technologies: ["ReactJs", "Javascript", "CSS", "Vite"],
+    title: "Sorting Visualizer - Interactive Algorithm Learning Tool",
+    description:
+      "Interactive algorithm learning tool that visually demonstrates sorting algorithms and lets users compare performance in real time.",
+    technologies: ["React", "JavaScript", "Styled Components", "Vite"],
     images: ["/sortingAlgo/ss-1.png", "/sortingAlgo/ss-2.png", "/sortingAlgo/ss-3.png"],
+    highlights: [
+      "Visualized 6 sorting algorithms with custom React hook-based animations.",
+      "Added controls for array size, sorting speed, and time complexity comparison.",
+    ],
     githubLink: "https://github.com/Shourov98/sorting_algo_visualization",
     liveView: "https://sorting-algorithm-visualization-kappa.vercel.app/",
-  },
-  {
-    title: "Mega Blog",
-    description: "A blog site built with React and Vite environment with Appwrite Database service.",
-    technologies: ["ReactJs", "Javascript", "Tailwind", "Appwrite", "Redux"],
-    images: ["/mega-blog/ss-1.png", "/mega-blog/ss-2.png", "/mega-blog/ss-3.png"],
-    githubLink: "https://github.com/Shourov98/MegaBlogg",
-    liveView: "https://mega-blog-smoky.vercel.app/",
-  },
-  {
-    title: "Todo Task",
-    description: "Built using React + Vite, Tailwind and Local Storage.",
-    technologies: ["ReactJs", "Javascript", "Tailwind", "Redux", "Local Storage"],
-    images: ["/todo1.jpg", "/todo2.jpg", "/todo3.jpg"],
-    githubLink: "https://github.com/Shourov98/Todo_with_redux",
-    liveView: "",
   },
 ];
 
@@ -86,25 +98,44 @@ export const Projects = () => {
                   ))}
                 </div>
 
+                {project.highlights && (
+                  <ul className="mb-4 space-y-2 text-sm text-gray-300 list-disc list-inside">
+                    {project.highlights.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+
                 {/* Image Section - Click to Expand */}
                 <div className="relative group">
-                  <img
-                    src={project.images[0]}
-                    alt={`${project.title} Cover`}
-                    className="rounded-lg object-cover w-full h-48 transition-transform group-hover:scale-105 cursor-pointer"
-                    onClick={() => setSelectedImage(project.images[0])}
-                  />
-                  <div className="flex gap-2 mt-2">
-                    {project.images.slice(1).map((image, idx) => (
+                  {project.images?.length ? (
+                    <>
                       <img
-                        key={idx}
-                        src={image}
-                        alt={`${project.title} screenshot ${idx + 1}`}
-                        className="rounded-md object-cover w-1/3 h-16 transition-transform hover:scale-105 cursor-pointer"
-                        onClick={() => setSelectedImage(image)}
+                        src={project.images[0]}
+                        alt={`${project.title} Cover`}
+                        className="rounded-lg object-cover w-full h-48 transition-transform group-hover:scale-105 cursor-pointer"
+                        onClick={() => setSelectedImage(project.images[0])}
                       />
-                    ))}
-                  </div>
+                      <div className="flex gap-2 mt-2">
+                        {project.images.slice(1).map((image, idx) => (
+                          <img
+                            key={idx}
+                            src={image}
+                            alt={`${project.title} screenshot ${idx + 1}`}
+                            className="rounded-md object-cover w-1/3 h-16 transition-transform hover:scale-105 cursor-pointer"
+                            onClick={() => setSelectedImage(image)}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="flex h-48 items-center justify-center rounded-lg border border-blue-500/20 bg-gradient-to-br from-[#0d1117] via-[#132238] to-[#061018]">
+                      <div className="text-center">
+                        <p className="text-sm uppercase tracking-[0.22em] text-blue-300">Production Project</p>
+                        <p className="mt-2 text-lg font-semibold text-white">{project.title}</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Buttons Section */}

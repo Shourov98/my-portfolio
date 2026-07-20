@@ -25,29 +25,30 @@ export const ProblemSolving = () => {
     {
       name: "LeetCode",
       url: "https://leetcode.com/u/shourov_mahbub/",
-      totalProblems: "160+",
+      totalProblems: "220",
       handle: "shourov_mahbub",
-      text: "Practiced problems from various categories and tried to make the solution optimal and easy to understand. Focused on algorithms and data structures related to graphs, dynamic programming, and databases.",
+      text: "Solved data structures and algorithms problems with a focus on clear, efficient solutions across common interview patterns.",
       languages: ["Python", "C++", "SQL"],
       logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png", // LeetCode logo URL
     },
     {
       name: "Codeforces",
       url: "https://codeforces.com/profile/Mahbub_Shourov",
-      totalProblems: "250+",
+      totalProblems: "276",
       handle: "Mahbub_Shourov",
-      text: "Participated in 40+ contests in Division 2 and 3. Solved problems to improve problem-solving speed and accuracy.",
-      maxRating: "1350+",
+      text: "Participated in 40+ contests and solved problems to improve algorithmic speed, accuracy, and implementation discipline.",
+      maxRating: "1304",
       languages: ["C++"],
       logo: "https://codeforces.org/s/0/images/codeforces-sponsored-by-ton.png", // Codeforces logo URL
     },
     {
       name: "CodeChef",
       url: "https://www.codechef.com/users/shourov_06",
-      totalProblems: "60+",
+      totalProblems: "64",
       handle: "shourov_06",
-      text: "Participated in 20+ contests. Solved problems from various categories and achieved a max rating of 1700+.",
+      text: "Participated in 20+ competitions, reached a 4-star profile, and solved problems across multiple algorithm categories.",
       languages: ["C++"],
+      maxRating: "1753",
       logo: "https://cdn.codechef.com/images/cc-logo.svg", // CodeChef logo URL
     },
     {
@@ -55,12 +56,10 @@ export const ProblemSolving = () => {
       url: "https://www.hackerrank.com/Shourov",
       totalProblems: "100+",
       handle: "Shourov",
-      text: "Solved problems from various categories. Participated in company and university contests. Earned certifications in Problem Solving, SQL, JavaScript, and React.",
+      text: "Practiced core programming and problem-solving tracks, earning profile stars in Problem Solving and Python.",
       certifications: [
-        "Problem Solving (Intermediate)",
-        "SQL (Intermediate)",
-        "JavaScript (Basic)",
-        "React (Basic)",
+        "2-star Problem Solving",
+        "3-star Python",
       ],
       languages: ["Python", "C++", "SQL", "JavaScript"],
       logo: "https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png", // HackerRank logo URL
@@ -146,7 +145,7 @@ export const ProblemSolving = () => {
           {/* Question Types Section */}
           <div className="mt-8 md:mt-12">
             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-blue-500 text-center">
-              Problem Types I've Worked On
+              Problem Types I&apos;ve Worked On
             </h3>
             <div className="flex flex-wrap justify-center gap-2 md:gap-3">
               {questionTypes.map((tech, key) => (
