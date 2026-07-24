@@ -1,10 +1,10 @@
-export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+export const MobileMenu = ({ menuOpen, setMenuOpen, activeSection }) => {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
-    { href: "#problem-solving", label: "Problem Solving" },
     { href: "#projects", label: "Projects" },
+    { href: "#problem-solving", label: "Problem Solving" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -35,7 +35,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
           onClick={() => setMenuOpen(false)}
           className={`mobile-nav-link text-2xl font-semibold my-3 transform transition-all duration-300 ${
             menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
+          } ${activeSection === link.href.slice(1) ? "mobile-nav-link-active" : ""}`}
           style={{ transitionDelay: menuOpen ? `${index * 45}ms` : "0ms" }}
         >
           {link.label}

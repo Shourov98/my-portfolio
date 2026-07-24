@@ -7,6 +7,7 @@ const projectsData = [
     title: "AI Marketplace Product Generator (CommandCtr)",
     description:
       "AI agent for generating marketplace-ready product listings with SEO-friendly titles, descriptions, specifications, pricing suggestions, and listing images.",
+    badges: ["AI", "FastAPI", "Production"],
     technologies: ["Python", "FastAPI", "OpenAI API", "Next.js", "Node.js"],
     highlights: [
       "Built REST APIs for AI services using FastAPI.",
@@ -18,6 +19,7 @@ const projectsData = [
     title: "BeforeListed - Apartment Rental Platform",
     description:
       "Full-stack apartment rental platform with referral signup, RBAC dashboards, JWT authentication, Stripe transactions, and admin approval workflows.",
+    badges: ["SaaS", "RBAC", "Stripe"],
     technologies: ["Next.js", "Redux Toolkit", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Stripe", "Hetzner VPS"],
     highlights: [
       "Built scalable frontend state flows with Redux Toolkit, OTP validation, reusable UI components, and real-time toast notifications.",
@@ -29,6 +31,7 @@ const projectsData = [
     title: "Chatty - Real time Chatting App (MERN Stack)",
     description:
       "Modern real-time chat platform with authentication, profile management, responsive UI, online user status, and live message delivery.",
+    badges: ["Real-time", "MERN", "Socket.io"],
     technologies: ["React 18", "Vite", "Zustand", "Tailwind CSS", "DaisyUI", "Express.js", "MongoDB", "Socket.io", "JWT"],
     images: ["/chatty/ss-1.png", "/chatty/ss-2.png", "/chatty/ss-3.png", "/chatty/ss-4.png"],
     highlights: [
@@ -43,6 +46,7 @@ const projectsData = [
     title: "Socially - Full-Stack Blog Platform",
     description:
       "Responsive social blog platform built with Next.js App Router, TypeScript, Clerk authentication, Prisma ORM, Shadcn UI, and Tailwind CSS.",
+    badges: ["Full Stack", "Next.js", "Prisma"],
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Clerk", "Shadcn UI"],
     images: ["/socially/ss-1.png", "/socially/ss-2.png", "/socially/ss-3.png"],
     highlights: [
@@ -56,6 +60,7 @@ const projectsData = [
     title: "Sorting Visualizer - Interactive Algorithm Learning Tool",
     description:
       "Interactive algorithm learning tool that visually demonstrates sorting algorithms and lets users compare performance in real time.",
+    badges: ["Algorithm", "Visualizer", "React"],
     technologies: ["React", "JavaScript", "Styled Components", "Vite"],
     images: ["/sortingAlgo/ss-1.png", "/sortingAlgo/ss-2.png", "/sortingAlgo/ss-3.png"],
     highlights: [
@@ -84,8 +89,16 @@ export const Projects = () => {
             {projectsData.map((project, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-white/10 bg-[#161B22]/90 p-4 shadow-lg transition hover:-translate-y-1 hover:border-blue-500/50 sm:p-6"
+                className="project-card rounded-2xl border border-white/10 bg-[#161B22]/90 p-4 shadow-lg transition hover:-translate-y-1 hover:border-blue-500/50 sm:p-6"
               >
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.badges.map((badge) => (
+                    <span key={badge} className="project-badge">
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+
                 <h3 className="mb-3 text-lg font-bold text-white sm:text-xl">{project.title}</h3>
                 <p className="mb-4 text-sm leading-6 text-gray-400 sm:text-base">{project.description}</p>
                 
@@ -143,7 +156,7 @@ export const Projects = () => {
                   {project.frontend && (
                     <a
                       href={project.frontend}
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="project-action"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -153,7 +166,7 @@ export const Projects = () => {
                   {project.backend && (
                     <a
                       href={project.backend}
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="project-action"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -163,7 +176,7 @@ export const Projects = () => {
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="project-action"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -173,7 +186,7 @@ export const Projects = () => {
                   {project.liveView && (
                     <a
                       href={project.liveView}
-                      className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition"
+                      className="project-action project-action-primary"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

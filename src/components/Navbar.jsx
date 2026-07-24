@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
-export const Navbar = ({ menuOpen, setMenuOpen }) => {
+export const Navbar = ({ activeSection, menuOpen, setMenuOpen }) => {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
-    { href: "#problem-solving", label: "Problem Solving" },
     { href: "#projects", label: "Projects" },
+    { href: "#problem-solving", label: "Problem Solving" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -31,7 +31,13 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="nav-link">
+              <a
+                key={link.href}
+                href={link.href}
+                className={`nav-link ${
+                  activeSection === link.href.slice(1) ? "nav-link-active" : ""
+                }`}
+              >
                 {link.label}
               </a>
             ))}
