@@ -32,33 +32,32 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative"
+      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden px-4 py-24 sm:px-6"
     >
       <RevealOnScroll>
-        <div className="text-center z-10 px-4">
+        <div className="z-10 mx-auto w-full max-w-5xl text-center">
           {/* Heading */}
-          <h1 className="animated-name text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-cyan-300 to-blue-500 bg-clip-text text-transparent leading-right">
+          <h1 className="animated-name mx-auto mb-6 max-w-4xl break-words bg-gradient-to-r from-blue-500 via-cyan-300 to-blue-500 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-5xl md:text-7xl">
             Hi, I&apos;m Mahbubul Hoque Shourov
           </h1>
 
           {/* Summary */}
-          <p className="text-gray-400 align-left text-lg mb-8 max-w-lg mx-auto">
+          <p className="mx-auto mb-8 max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
             Junior Full Stack Developer at SparkTech Agency building production SaaS applications with Next.js, React, TypeScript, Node.js, Express, FastAPI, MongoDB, and LLM APIs. I work across secure authentication, RBAC dashboards, API integrations, Stripe billing, CI/CD, and deployment on cloud/VPS infrastructure.
           </p>
 
           {/* Buttons */}
-          <div className="mb-10 flex flex-wrap justify-center gap-3">
+          <div className="mx-auto mb-10 flex w-full max-w-xs flex-col items-center justify-center gap-3 sm:max-w-none sm:flex-row sm:flex-wrap">
             <a
               href="#projects"
-              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+              className="relative inline-flex w-full justify-center overflow-hidden rounded bg-blue-500 px-6 py-3 font-medium text-white transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] sm:w-auto"
             >
               View Projects
             </a>
 
             <a
               href="#contact"
-              className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
-              hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"
+              className="inline-flex w-full justify-center rounded border border-blue-500/50 px-6 py-3 font-medium text-blue-500 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500/10 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] sm:w-auto"
             >
               Contact Me
             </a>
@@ -66,7 +65,7 @@ export const Home = () => {
               href={resumePath}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-cyan-400/50 text-cyan-300 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:bg-cyan-400/10"
+              className="inline-flex w-full items-center justify-center gap-2 rounded border border-cyan-400/50 px-6 py-3 font-medium text-cyan-300 transition-all duration-200 hover:-translate-y-0.5 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] sm:w-auto"
             >
               <FaEye size={16} />
               View Resume
@@ -74,17 +73,17 @@ export const Home = () => {
             <a
               href={resumePath}
               download="Mahbubul-Hoque-Shourov-Resume.pdf"
-              className="inline-flex items-center gap-2 border border-white/20 text-gray-200 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400/60 hover:bg-white/5"
+              className="inline-flex w-full items-center justify-center gap-2 rounded border border-white/20 px-6 py-3 font-medium text-gray-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400/60 hover:bg-white/5 sm:w-auto"
             >
               <FaDownload size={16} />
               Download Resume
             </a>
           </div>
 
-          <div className="hero-snapshot mx-auto mb-10 max-w-3xl rounded-2xl border border-white/10 bg-[#0d1117]/80 p-4 shadow-xl backdrop-blur-md md:p-5">
+          <div className="hero-snapshot mx-auto mb-10 w-full max-w-3xl rounded-2xl border border-white/10 bg-[#0d1117]/80 p-4 shadow-xl backdrop-blur-md md:p-5">
             <div className="grid gap-4 md:grid-cols-[1.1fr_1fr] md:items-center">
-              <div className="text-left">
-                <div className="mb-3 flex items-center gap-2">
+              <div className="text-center md:text-left">
+                <div className="mb-3 flex items-center justify-center gap-2 md:justify-start">
                   <span className="availability-dot h-2.5 w-2.5 rounded-full bg-emerald-400" />
                   <span className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
                     Available for full-stack roles
@@ -96,12 +95,12 @@ export const Home = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+              <div className="mx-auto grid w-full max-w-sm grid-cols-2 gap-2 sm:max-w-none sm:grid-cols-4 md:grid-cols-2">
                 <a
                   href={resumePath}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                  className="quick-action flex min-h-20 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200 sm:min-h-24"
                 >
                   <FaEye size={20} />
                   <span className="mt-2 text-xs font-medium">View CV</span>
@@ -109,7 +108,7 @@ export const Home = () => {
                 <a
                   href={resumePath}
                   download="Mahbubul-Hoque-Shourov-Resume.pdf"
-                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                  className="quick-action flex min-h-20 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200 sm:min-h-24"
                 >
                   <FaDownload size={20} />
                   <span className="mt-2 text-xs font-medium">Download</span>
@@ -117,7 +116,7 @@ export const Home = () => {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                  className="quick-action flex min-h-20 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200 sm:min-h-24"
                 >
                   {copiedEmail ? <FaCheckCircle size={20} /> : <FaCopy size={20} />}
                   <span className="mt-2 text-xs font-medium">
@@ -126,7 +125,7 @@ export const Home = () => {
                 </button>
                 <a
                   href="#experience"
-                  className="quick-action flex min-h-24 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200"
+                  className="quick-action flex min-h-20 flex-col items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 text-blue-200 transition hover:-translate-y-1 hover:border-cyan-400/50 hover:text-cyan-200 sm:min-h-24"
                 >
                   <FaBriefcase size={20} />
                   <span className="mt-2 text-xs font-medium">Work</span>
@@ -136,7 +135,7 @@ export const Home = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex justify-center space-x-6 md:space-x-8 mb-8">
+          <div className="mb-8 flex flex-wrap justify-center gap-6 md:gap-8">
             <a
               href="https://facebook.com/your-profile" // Replace with your Facebook profile link
               target="_blank"
@@ -172,7 +171,7 @@ export const Home = () => {
           </div>
 
           {/* Email and Phone Number */}
-          <div className="flex justify-center space-x-6 md:space-x-8 mt-8">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 text-sm sm:flex-row sm:gap-6 md:gap-8 md:text-base">
             {/* Phone Number */}
             <div className="flex items-center space-x-2">
               <a

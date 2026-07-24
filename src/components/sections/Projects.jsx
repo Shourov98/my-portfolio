@@ -74,32 +74,32 @@ export const Projects = () => {
   const closeModal = () => setSelectedImage(null);
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-black">
+    <section id="projects" className="flex items-start justify-center py-16 md:min-h-screen md:items-center md:py-20">
       <RevealOnScroll>
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+          <h2 className="mb-10 text-center text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent md:text-4xl">
             Featured Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-6 md:max-w-none md:grid-cols-2 md:gap-8">
             {projectsData.map((project, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl border border-white/10 bg-[#161B22] hover:border-blue-500/50 transition transform hover:-translate-y-1 shadow-lg"
+                className="rounded-2xl border border-white/10 bg-[#161B22]/90 p-4 shadow-lg transition hover:-translate-y-1 hover:border-blue-500/50 sm:p-6"
               >
-                <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <h3 className="mb-3 text-lg font-bold text-white sm:text-xl">{project.title}</h3>
+                <p className="mb-4 text-sm leading-6 text-gray-400 sm:text-base">{project.description}</p>
                 
                 {/* Tech Stack Badges */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, key) => (
-                    <span key={key} className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm">
+                    <span key={key} className="rounded-full bg-blue-500/10 px-3 py-1 text-xs text-blue-400 sm:text-sm">
                       {tech}
                     </span>
                   ))}
                 </div>
 
                 {project.highlights && (
-                  <ul className="mb-4 space-y-2 text-sm text-gray-300 list-disc list-inside">
+                  <ul className="mb-4 space-y-2 text-sm leading-6 text-gray-300 list-disc list-inside">
                     {project.highlights.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -129,17 +129,17 @@ export const Projects = () => {
                       </div>
                     </>
                   ) : (
-                    <div className="flex h-48 items-center justify-center rounded-lg border border-blue-500/20 bg-gradient-to-br from-[#0d1117] via-[#132238] to-[#061018]">
+                    <div className="flex h-40 items-center justify-center rounded-lg border border-blue-500/20 bg-gradient-to-br from-[#0d1117] via-[#132238] to-[#061018] sm:h-48">
                       <div className="text-center">
-                        <p className="text-sm uppercase tracking-[0.22em] text-blue-300">Production Project</p>
-                        <p className="mt-2 text-lg font-semibold text-white">{project.title}</p>
+                        <p className="text-xs uppercase tracking-[0.22em] text-blue-300 sm:text-sm">Production Project</p>
+                        <p className="mt-2 px-3 text-base font-semibold text-white sm:text-lg">{project.title}</p>
                       </div>
                     </div>
                   )}
                 </div>
 
                 {/* Buttons Section */}
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-between">
                   {project.frontend && (
                     <a
                       href={project.frontend}

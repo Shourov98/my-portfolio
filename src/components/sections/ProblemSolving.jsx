@@ -69,63 +69,63 @@ export const ProblemSolving = () => {
   return (
     <section
       id="problem-solving"
-      className="min-h-screen flex items-center justify-center py-12 md:py-20"
+      className="flex items-start justify-center py-16 md:min-h-screen md:items-center md:py-20"
     >
       <RevealOnScroll>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-8 text-center text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent md:mb-12 md:text-4xl">
             Problem Solving
           </h2>
 
           {/* Platforms Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-5 md:max-w-none md:grid-cols-2 md:gap-8">
             {platforms.map((platform, id) => (
               <div
                 key={id}
-                className="rounded-xl p-4 md:p-6 border border-white/10 hover:border-blue-500/50 transition-all hover:-translate-y-1 bg-black/10 backdrop-blur-sm"
+                className="w-full rounded-xl border border-white/10 bg-black/20 p-4 text-center backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-blue-500/50 md:p-6 md:text-left"
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="mb-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
                   {/* Platform Logo */}
                   <img
                     src={platform.logo}
                     alt={`${platform.name} Logo`}
-                    className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                    className="h-10 w-10 object-contain md:h-12 md:w-12"
                   />
-                  <h3 className="text-xl md:text-2xl font-bold text-blue-500">
+                  <h3 className="text-xl font-bold text-blue-500 md:text-2xl">
                     {platform.name}
                   </h3>
                 </div>
-                <p className="text-gray-400 text-sm md:text-base mb-4">
+                <p className="mb-4 text-sm leading-6 text-gray-400 md:text-base">
                   {platform.text}
                 </p>
                 <div className="space-y-2">
-                  <p className="text-gray-300 text-sm md:text-base">
+                  <p className="text-sm text-gray-300 md:text-base">
                     <span className="font-semibold">Total Solved:</span>{" "}
                     {platform.totalProblems} problems
                   </p>
-                  <p className="text-gray-300 text-sm md:text-base">
+                  <p className="text-sm text-gray-300 md:text-base">
                     <span className="font-semibold">Handle:</span>{" "}
                     <a
                       href={platform.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline"
+                      className="break-all text-blue-500 hover:underline"
                     >
                       {platform.handle}
                     </a>
                   </p>
                   {platform.maxRating && (
-                    <p className="text-gray-300 text-sm md:text-base">
+                    <p className="text-sm text-gray-300 md:text-base">
                       <span className="font-semibold">Max Rating:</span>{" "}
                       {platform.maxRating}
                     </p>
                   )}
                   {platform.certifications && (
                     <div className="mt-4">
-                      <p className="font-semibold text-gray-300 text-sm md:text-base mb-2">
+                      <p className="mb-2 text-sm font-semibold text-gray-300 md:text-base">
                         Certifications:
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap justify-center gap-2 md:justify-start">
                         {platform.certifications.map((certification, key) => (
                           <span
                             key={key}
@@ -144,10 +144,10 @@ export const ProblemSolving = () => {
 
           {/* Question Types Section */}
           <div className="mt-8 md:mt-12">
-            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-blue-500 text-center">
+            <h3 className="mb-4 text-center text-xl font-bold text-blue-500 md:mb-6 md:text-2xl">
               Problem Types I&apos;ve Worked On
             </h3>
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+            <div className="mx-auto flex max-w-md flex-wrap justify-center gap-2 md:max-w-4xl md:gap-3">
               {questionTypes.map((tech, key) => (
                 <span
                   key={key}
