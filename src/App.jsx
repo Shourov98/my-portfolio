@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import './index.css'
 import { LoadingScreen } from './components/LoadingScreen'
+import { CursorGlow } from './components/CursorGlow'
 import { Navbar } from './components/Navbar'
 import { MobileMenu } from './components/MobileMenu'
 import { Home } from './components/sections/Home'
@@ -18,8 +19,10 @@ function App() {
 
   return (
     <>
+      <CursorGlow />
+      <div className="site-texture" aria-hidden="true" />
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
-      <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100": "opacity-0"} bg-black text-gray-100`}>
+      <div className={`relative z-10 min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100": "opacity-0"} bg-transparent text-gray-100`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
